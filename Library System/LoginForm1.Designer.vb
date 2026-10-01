@@ -23,21 +23,22 @@ Partial Class LoginForm1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LoginForm1))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.gbLoginform = New System.Windows.Forms.GroupBox()
-        Me.btnRegister = New System.Windows.Forms.Button()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
-        Me.cbRemember = New System.Windows.Forms.CheckBox()
-        Me.btnLogin = New System.Windows.Forms.Button()
-        Me.txtPassword = New System.Windows.Forms.TextBox()
-        Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.Guna2ShapesTool1 = New Guna.UI2.WinForms.Guna2ShapesTool(Me.components)
+        Me.txtUsername = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtPassword = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.btnLogin = New Guna.UI2.WinForms.Guna2Button()
+        Me.rbRemember = New Guna.UI2.WinForms.Guna2RadioButton()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbLoginform.SuspendLayout()
         Me.SuspendLayout()
@@ -47,9 +48,9 @@ Partial Class LoginForm1
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(55, 81)
+        Me.PictureBox1.Location = New System.Drawing.Point(71, 81)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(253, 154)
+        Me.PictureBox1.Size = New System.Drawing.Size(209, 154)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.PictureBox1.TabIndex = 9
         Me.PictureBox1.TabStop = False
@@ -58,12 +59,11 @@ Partial Class LoginForm1
         '
         Me.gbLoginform.BackColor = System.Drawing.Color.MediumPurple
         Me.gbLoginform.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.gbLoginform.Controls.Add(Me.btnRegister)
-        Me.gbLoginform.Controls.Add(Me.LinkLabel1)
-        Me.gbLoginform.Controls.Add(Me.cbRemember)
+        Me.gbLoginform.Controls.Add(Me.rbRemember)
         Me.gbLoginform.Controls.Add(Me.btnLogin)
         Me.gbLoginform.Controls.Add(Me.txtPassword)
         Me.gbLoginform.Controls.Add(Me.txtUsername)
+        Me.gbLoginform.Controls.Add(Me.LinkLabel1)
         Me.gbLoginform.Controls.Add(Me.Label6)
         Me.gbLoginform.Controls.Add(Me.Label2)
         Me.gbLoginform.Controls.Add(Me.Label4)
@@ -75,20 +75,6 @@ Partial Class LoginForm1
         Me.gbLoginform.TabIndex = 6
         Me.gbLoginform.TabStop = False
         '
-        'btnRegister
-        '
-        Me.btnRegister.BackColor = System.Drawing.Color.Purple
-        Me.btnRegister.FlatAppearance.BorderSize = 0
-        Me.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnRegister.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRegister.ForeColor = System.Drawing.SystemColors.Info
-        Me.btnRegister.Location = New System.Drawing.Point(152, 234)
-        Me.btnRegister.Name = "btnRegister"
-        Me.btnRegister.Size = New System.Drawing.Size(116, 32)
-        Me.btnRegister.TabIndex = 5
-        Me.btnRegister.Text = "Register"
-        Me.btnRegister.UseVisualStyleBackColor = False
-        '
         'LinkLabel1
         '
         Me.LinkLabel1.AutoSize = True
@@ -99,52 +85,6 @@ Partial Class LoginForm1
         Me.LinkLabel1.TabIndex = 4
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "Forget Password?"
-        '
-        'cbRemember
-        '
-        Me.cbRemember.AutoSize = True
-        Me.cbRemember.Font = New System.Drawing.Font("Arial", 8.25!)
-        Me.cbRemember.ForeColor = System.Drawing.Color.FloralWhite
-        Me.cbRemember.Location = New System.Drawing.Point(34, 298)
-        Me.cbRemember.Name = "cbRemember"
-        Me.cbRemember.Size = New System.Drawing.Size(94, 18)
-        Me.cbRemember.TabIndex = 3
-        Me.cbRemember.Text = "Remember me"
-        Me.cbRemember.UseVisualStyleBackColor = True
-        '
-        'btnLogin
-        '
-        Me.btnLogin.BackColor = System.Drawing.Color.Purple
-        Me.btnLogin.FlatAppearance.BorderSize = 0
-        Me.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLogin.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogin.ForeColor = System.Drawing.SystemColors.Info
-        Me.btnLogin.Location = New System.Drawing.Point(30, 234)
-        Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(116, 32)
-        Me.btnLogin.TabIndex = 2
-        Me.btnLogin.Text = "Login"
-        Me.btnLogin.UseVisualStyleBackColor = False
-        '
-        'txtPassword
-        '
-        Me.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtPassword.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPassword.Location = New System.Drawing.Point(30, 172)
-        Me.txtPassword.Multiline = True
-        Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.Size = New System.Drawing.Size(227, 34)
-        Me.txtPassword.TabIndex = 1
-        '
-        'txtUsername
-        '
-        Me.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtUsername.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUsername.Location = New System.Drawing.Point(30, 110)
-        Me.txtUsername.Multiline = True
-        Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(227, 34)
-        Me.txtUsername.TabIndex = 1
         '
         'Label6
         '
@@ -195,13 +135,13 @@ Partial Class LoginForm1
         '
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.Info
-        Me.Label3.Location = New System.Drawing.Point(40, 259)
+        Me.Label3.Location = New System.Drawing.Point(24, 263)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(297, 24)
+        Me.Label3.Size = New System.Drawing.Size(335, 19)
         Me.Label3.TabIndex = 7
-        Me.Label3.Text = "Library Management System"
+        Me.Label3.Text = "Noah Academy System Inc. Library System" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'Label5
         '
@@ -214,6 +154,91 @@ Partial Class LoginForm1
         Me.Label5.Size = New System.Drawing.Size(125, 15)
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "Read ● Learn ● Grow"
+        '
+        'Guna2ShapesTool1
+        '
+        Me.Guna2ShapesTool1.Location = New System.Drawing.Point(0, 0)
+        Me.Guna2ShapesTool1.PolygonSkip = 1
+        Me.Guna2ShapesTool1.Rotate = 0!
+        Me.Guna2ShapesTool1.Size = New System.Drawing.Size(200, 200)
+        Me.Guna2ShapesTool1.TargetControl = Nothing
+        '
+        'txtUsername
+        '
+        Me.txtUsername.BorderRadius = 10
+        Me.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtUsername.DefaultText = ""
+        Me.txtUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtUsername.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtUsername.Location = New System.Drawing.Point(37, 115)
+        Me.txtUsername.Name = "txtUsername"
+        Me.txtUsername.PlaceholderText = ""
+        Me.txtUsername.SelectedText = ""
+        Me.txtUsername.Size = New System.Drawing.Size(220, 36)
+        Me.txtUsername.TabIndex = 6
+        '
+        'txtPassword
+        '
+        Me.txtPassword.BorderRadius = 10
+        Me.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtPassword.DefaultText = ""
+        Me.txtPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtPassword.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtPassword.Location = New System.Drawing.Point(37, 172)
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.PlaceholderText = ""
+        Me.txtPassword.SelectedText = ""
+        Me.txtPassword.Size = New System.Drawing.Size(220, 36)
+        Me.txtPassword.TabIndex = 6
+        '
+        'btnLogin
+        '
+        Me.btnLogin.BorderRadius = 10
+        Me.btnLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnLogin.FillColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnLogin.FocusedColor = System.Drawing.Color.Purple
+        Me.btnLogin.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogin.ForeColor = System.Drawing.Color.White
+        Me.btnLogin.Location = New System.Drawing.Point(37, 229)
+        Me.btnLogin.Name = "btnLogin"
+        Me.btnLogin.PressedColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnLogin.Size = New System.Drawing.Size(220, 37)
+        Me.btnLogin.TabIndex = 7
+        Me.btnLogin.Text = "Login"
+        '
+        'rbRemember
+        '
+        Me.rbRemember.AutoSize = True
+        Me.rbRemember.BackColor = System.Drawing.Color.Transparent
+        Me.rbRemember.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.rbRemember.CheckedState.BorderThickness = 0
+        Me.rbRemember.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.rbRemember.CheckedState.InnerColor = System.Drawing.Color.White
+        Me.rbRemember.CheckedState.InnerOffset = -4
+        Me.rbRemember.ForeColor = System.Drawing.Color.FloralWhite
+        Me.rbRemember.Location = New System.Drawing.Point(37, 299)
+        Me.rbRemember.Name = "rbRemember"
+        Me.rbRemember.Size = New System.Drawing.Size(93, 17)
+        Me.rbRemember.TabIndex = 8
+        Me.rbRemember.Text = "Remember me"
+        Me.rbRemember.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.rbRemember.UncheckedState.BorderThickness = 2
+        Me.rbRemember.UncheckedState.FillColor = System.Drawing.Color.Transparent
+        Me.rbRemember.UncheckedState.InnerColor = System.Drawing.Color.Transparent
+        Me.rbRemember.UseVisualStyleBackColor = False
         '
         'LoginForm1
         '
@@ -243,10 +268,6 @@ Partial Class LoginForm1
 
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents gbLoginform As GroupBox
-    Friend WithEvents cbRemember As CheckBox
-    Friend WithEvents btnLogin As Button
-    Friend WithEvents txtPassword As TextBox
-    Friend WithEvents txtUsername As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label4 As Label
@@ -254,5 +275,9 @@ Partial Class LoginForm1
     Friend WithEvents Label3 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents LinkLabel1 As LinkLabel
-    Friend WithEvents btnRegister As Button
+    Friend WithEvents txtUsername As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Guna2ShapesTool1 As Guna.UI2.WinForms.Guna2ShapesTool
+    Friend WithEvents btnLogin As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents txtPassword As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents rbRemember As Guna.UI2.WinForms.Guna2RadioButton
 End Class

@@ -16,4 +16,7 @@ Public Class LoginForm1
         Me.Close()
     End Sub
 
+    Private Sub btnRegister_Click(sender As Object, e As EventArgs)
+        Register.Show()
+    End Sub
 End Class
